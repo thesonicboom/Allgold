@@ -1,11 +1,13 @@
 # Allgold
 
 
-AUFGABE:
+########## AUFGABE: ##########
+
 Implementieren Sie (als Web Applikation) die Use Cases aus der PP1, die den Verkauf und die Inventarisierung betreffen. 
 Zu berücksichtigen ist dabei, dass Verkäufe sowohl in Verkaufsräumen als auch an Automaten stattfinden.
 Hierbei sollen neben der HTML- und CSS-Programmierung auch REST-Technologien, PHP und JavaScript zum Einsatz kommen.
 
+########## Use Cases ##########
 
 Zu implementierende Anwendungsfälle (Use Cases)
 
@@ -17,7 +19,9 @@ Zu implementierende Anwendungsfälle (Use Cases)
 -> Verkauf erfassen ( erfasst alle Produktverkäufe an einer Verkaufsstelle)
 
 
-INTERVIEW: Was macht Allgold?
+########## INTERVIEW: ##########
+
+Was macht Allgold?
 
 Wir stellen Premium Molkereiprodukte (Joghurt, Käse, Butter und so weiter) her, die wir in unseren
 verschiedenen Einzelhandelsläden und an mehreren Selbstbedienungsautomaten im Allgäu verkaufen. 
