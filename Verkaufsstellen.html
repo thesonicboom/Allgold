@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Allgold</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+    <link href="css/jsfcrud.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/inventory.js"></script>
+    <script type="text/javascript" src="js/products.js"></script>
+    <!--<script type="text/javascript" src="js/station.js"></script>-->
+  </head>
+  <body>
+    <div id="main">
+      <div id="trailer">
+        <img src="media/trailer.jpg" width="750" height="150" alt="trailer">
+      </div>
+      <div id="menuetop">
+        <ul id="menu">
+          <li>
+           <a href="index.html">HOME</a>
+           <a href="Verkaufsstellen.html">Verkäufer</a>
+           <a href="Lieferanten.html">Lieferanten</a>
+           <a href="http://localhost:13273/AllgoldWebApp/faces/cockpit/Products.xhtml">Produktanalyse</a>
+           <a href="http://localhost:13273/AllgoldWebApp/faces/cockpit/Lagerbestand.xhtml">Lagerbestand</a>
+           <a href="http://localhost:13273/AllgoldWebApp/faces/cockpit/cockpit.xhtml">Cockpit</a>
+          </li>
+        </ul>
+      </div>
+      <!-- page content -->
+      <div id="content">  
+        <fieldset>
+        <input type="hidden" name="action" value = "GET">
+
+        <!-- Form Name -->
+        <legend>Standortsuche</legend> <!-- <legend> stellt eine Beschriftung für den Inhalt seines übergeordneten <fieldset> dar.-->
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="description">Stations ID</label>  
+          <div class="col-md-4">
+            <input id="stationID" name="stationID" placeholder="stationID" class="form-control input-md" required="" type="text">
+            <span class="help-block">Bitte geben Sie die ID der Verkaufsstelle ein</span>  
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <!--<label class="col-md-4 control-label" for="open">Verkaufsstellen</label>-->
+          <div class="col-md-4">
+            <button onclick="findInventory()" id="open" name="open" class="btn btn-primary">Bestätigen</button>
+          </div>
+        </div>
+
+        </fieldset>
+        <fieldset id = "list">
+          <legend>Produkte</legend>  
+        </fieldset>
+
+
+
+        <!-- To Do Verkauf betätigen / buchen, abzug Inventar bei bestätigung-->
+
+      </div>
+      <div id="menuefooter" class="clmenuefooter">
+      </div>
+      <div id="bottom">
+      </div>
+    </div>  
+  </body>
+</html>
