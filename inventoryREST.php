@@ -1,5 +1,4 @@
-<?php
- 
+<?php 
 // include necessary classes 
 
 include('inventory.php');
@@ -8,7 +7,8 @@ include('inventory.php');
 $inventory = new inventory();
 $data = array_merge($_GET, $_POST);
 $method = $data['action'];
-/*var_dump($_GET);*/
+$retlnk = '<br> <a href="index.html"> zur&uuml;ck zur Homeseite </a>';
+
 
  // create SQL based on HTTP method
 switch ($method) 
@@ -17,16 +17,16 @@ switch ($method)
 
     if(!empty($data['stationID']))
     {
-        error_log(print_r($data,true));
+        
         $sql = $inventory->findByStationID($data['stationID']);
-        header('Content-type: application/json; charset=utf-8'); /*header nachlesen*/
+        header('Content-type: application/json; charset=utf-8');
         echo json_encode($sql);
         break;
     }
 
     else
     {
-        $sql = $inventory->getInventory(); 
+    	$sql = $inventory->getInventory();
         header('Content-type: application/json; charset=utf-8'); 
         echo json_encode($sql);
         break;
@@ -34,6 +34,19 @@ switch ($method)
 
     break;
 
+  case 'PUT':
+  
+    $sql = $inventory->updateInventory($data);
+    if($sql == "OK")
+    {
+        error_log(print_r($data,true));
+        header('Content-type: application/json; charset=utf-8'); 
+        echo json_encode($send);        
+    } 
+    else
+    {
+        echo $sql;
+    }
+    break;
 }
-
 ?>

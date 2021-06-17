@@ -79,7 +79,7 @@ function getCoords()
 	var method = "action=GET";
 	var descVal = document.getElementById("stationID").value;
 	var descName = document.getElementById("stationID").name;
-	url += "?"+method+"&"+descName+"="+descVal; /**/
+	url += "?"+method+"&"+descName+"="+descVal;
 
 	alert(url);
 
